@@ -92,19 +92,9 @@ let fruits = [
 */
 
 // CODE HERE
-fruits.forEach((item) => {
-  if (item.color === "red") {
-    return console.log(
-      The fruit with index ${fruits.indexOf(item)} is an apple
-    );
-  } else if (item.color === "orange") {
-    return console.log(
-      The fruit with index ${fruits.indexOf(item)} is an orange
-    );
-  } else {
-    return console.log(
-      The fruit with index ${fruits.indexOf(item)} is neither apple or orange
-    );
+fruits.forEach((fruit) => {
+  if(fruit.color === 'red'){
+    return console.log(`The fruit with index ${(item)} is an apple.`)
   }
 });
 
@@ -165,8 +155,14 @@ let foods = [
 */
 
 // CODE HERE
-let meatFoods = foods.filter((foods) => foods.includes("meat"))
-console.log (meatFoods)
+
+const meatFoods = foods.filter((el) => el.tags.includes('meat'))
+
+console.log(meatFoods)
+
+const meatTotals = meatFoods.reduce((acc, curr) => acc + curr.price, 0)
+
+console.log(meatTotals)
 
 // THE TOTAL
 

@@ -132,5 +132,10 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 // CODE HERE
-let bobsPrices = purchases.filter((purchase) => purchase['owner'.Bob])
+const bobsPrices = purchases.filter((element) => element.owner.includes("Bob"))
+
 console.log(bobsPrices)
+
+const bobsTotal = bobsPrices.reduce((acc, curr) => acc + curr.price, 0)
+
+console.log(bobsTotal)
